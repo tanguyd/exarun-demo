@@ -58,8 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\app.js" />
-    <Content Include="app\directives\sortable.js" />
-    <Content Include="app\directives\task.html" />
+    <Content Include="app\directives\postIt.html" />
     <Content Include="app\directives\postIt.js" />
     <Content Include="app\services\db.js" />
     <Content Include="app\projects\projects.html" />
@@ -152,6 +151,7 @@
     <Content Include="Scripts\jquery-ui-1.10.4.min.js">
       <DependentUpon>jquery-ui-1.10.4.js</DependentUpon>
     </Content>
+    <Content Include="Scripts\sortable.js" />
     <Content Include="Scripts\sugar-es6-patch.js" />
     <Content Include="Scripts\sugar-es6-patch.min.js">
       <DependentUpon>sugar-es6-patch.js</DependentUpon>

@@ -3,7 +3,10 @@
 
     var app = angular.module('app', [
         // Angular built-in module
-        'ngRoute'
+        'ngRoute',
+
+        // Other angular module
+        'ui.sortable'
     ]);
 
     app.config(function ($routeProvider) {
