@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="app">
+<head>
+    <title>ExaBoard</title>
+
+    <!-- General Scripts -->
+    <script src="Scripts/jquery-2.1.1.min.js"></script>
+    <script src="Scripts/jquery-ui-1.10.4.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/sugar.min.js"></script>
+
+    <!-- Angular and built-in modules -->
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-route.min.js"></script>
+    <script src="Scripts/angular-resource.min.js"></script>
+
+    <!-- Others angular modules -->
+    <!-- App modules -->
+    <script src="app/app.js"></script>
+
+    <!-- Services -->
+    <script src="app/services/db.js"></script>
+    <script src="app/services/projectService.js"></script>
+    <script src="app/services/taskService.js"></script>
+
+    <!-- Directives -->
+    <script src="app/directives/sortable.js"></script>
+    <script src="app/directives/postIt.js"></script>
+
+    <!-- Controllers -->
+    <script src="app/projects/projects.js"></script>
+    <script src="app/tasks/tasks.js"></script>
+
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="Content/site.css" rel="stylesheet" />
+
+</head>
+<body ng-controller="appController">
+
+    <div>
+        {{title}}
+    </div>
+
+    <div ng-view></div>
+
+</body>
+</html>

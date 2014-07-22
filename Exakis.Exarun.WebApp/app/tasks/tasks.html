@@ -1,0 +1,19 @@
+﻿<div ng-controller="tasksController">
+    <div><a ng-href="#/">Go back</a></div>
+
+    <div class="tasksBoard">
+        <div class="list-wrapper">
+            
+            <ul class="list" sortable ng-repeat="status in statuses">
+                <h3>{{status.name}}</h3>
+                <hr />
+                <!--<li ng-repeat="task in tasks | statusFilter:status">-->
+                <li ng-repeat="task in tasks | filter:{status:status.name}">
+                    <post-it task="task"></post-it>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+</div>

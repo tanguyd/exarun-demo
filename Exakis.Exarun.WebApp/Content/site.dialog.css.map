@@ -1,0 +1,9 @@
+{
+  "version": 3,
+  "file": "site.dialog.css",
+  "sources": [
+    "site.dialog.less"
+  ],
+  "names": [],
+  "mappings": "AAEA;EACI,mBAAA"
+}
