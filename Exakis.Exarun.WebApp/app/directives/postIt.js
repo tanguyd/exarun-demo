@@ -13,7 +13,7 @@
             scope: {
               task: '='  
             },
-            templateUrl: '/app/directives/postIt.html'
+            templateUrl: '/app/templates/partials/postIt.html'
         };
     });
 

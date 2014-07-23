@@ -29,8 +29,8 @@
     <script src="app/directives/postIt.js"></script>
 
     <!-- Controllers -->
-    <script src="app/projects/projects.js"></script>
-    <script src="app/tasks/tasks.js"></script>
+    <script src="app/controllers/projectsController.js"></script>
+    <script src="app/controllers/tasksController.js"></script>
 
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link href="Content/font-awesome.min.css" rel="stylesheet" />
@@ -38,12 +38,28 @@
 
 </head>
 <body ng-controller="appController">
-
-    <div>
-        {{title}}
-    </div>
+    
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand title" href="#"><i class="fa fa-github fa-lg"></i> {{title}}</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><p class="navbar-text navbar-separator"><i class="fa fa-circle fa-sm"></i></p></li>
+                    <li><a href="#">Projects</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     <div ng-view></div>
+    
+    <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+        <div class="container-fluid">
+            <p class="navbar-text navbar-right">Developped by <a href="http://www.exakis.com" target="_blank" class="navbar-link font-bold">Exakis</a> team</p>
+        </div>
+    </div>
 
 </body>
 </html>

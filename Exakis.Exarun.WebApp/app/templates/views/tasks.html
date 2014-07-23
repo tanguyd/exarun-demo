@@ -1,0 +1,23 @@
+﻿<div ng-controller="tasksController">
+    <div class="tasksBoard">
+        <div class="list-wrapper">
+
+            <div class="list" ng-repeat="status in statuses">
+                    <div>
+                        <h3>{{status.name}}</h3>
+                        <!--<hr />-->
+                        <br />
+                    </div>
+
+                    <ul ui-sortable="sortableOptions" class="apps-container" ng-model="status.tasks">
+                        <li ng-repeat="task in status.tasks">
+                            <post-it task="task"></post-it>
+                        </li>
+                    </ul>
+            </div>
+
+        </div>
+    </div>
+
+
+</div>

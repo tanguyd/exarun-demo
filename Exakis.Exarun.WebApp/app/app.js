@@ -13,10 +13,10 @@
         // Routes Configuration
         $routeProvider
             .when('/projects', {
-                templateUrl: 'app/projects/projects.html'
+                templateUrl: 'app/templates/views/projects.html'
             })
             .when('/tasks/:projectId', {
-                templateUrl: 'app/tasks/tasks.html'
+                templateUrl: 'app/templates/views/tasks.html'
             })
             .otherwise({ redirectTo: '/projects' });
     });

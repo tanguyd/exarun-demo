@@ -1,23 +1,90 @@
-﻿@import url('site.variables.less');
+﻿@font-face {
+	font-family: DK Crayon Crumble;
+	src: url('DK Crayon Crumble.ttf') format('truetype');
+}
+
+@import url('site.variables.less');
+@import url('site.animations.less');
 
 body {
     background: @bg-color;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        
 }
 
 .title {
-    color: @main-color;
+    color: @color-main !important;
 }
 
-.projectBlock {
-    background: #00ffff;
+// NAV
+.navbar-default{
+    border-width:0;
+    border-color: transparent;
+}
+
+.navbar-separator{
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+// FONT
+.font-bold{
+    font-weight: bold;
+}
+
+.nav a {
+    font-size: large;
+}
+
+// PROJECTS
+.projectBoard{
+    padding: 20px;
+}
+
+.projectTile {
+    width: 250px;
+    height: 300px;
+    float: left;
+    background: @color-tile;
     margin: 15px;
+    position: relative;
+    opacity: 1;
 }
 
-.tasksBoard {
+.projectTile:hover {
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    /*-moz-animation: scaleZoom 1s;
+    -o-animation: scaleZoom 1s;
+    -webkit-animation: scaleZoom 1s;
+    animation: scaleZoom 1s;*/
+}
+
+.tile-title {
+    text-align: left;
+    font-size: large;
+    height: 30px;
+    //background: #878787;
+    color: @color-main;
+    padding: 3px;
+}
+
+.tile-footer{
     position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: #b6e0ff;
+    height: 25px;
+    bottom: 0;
+    right: 5px;
+}
+
+// TASKS
+.tasksBoard {
+    position: relative;
+    width: auto;
+    //height: 100%;
+    padding: 20px;
     overflow-x: auto;
     overflow-y: hidden;
 }
@@ -27,23 +94,34 @@ body {
 }
 
 .app {
-    min-height: 20px;
-     background: #AA4152;
-    border-radius: 3px;
+    min-height: 45px;
+    background: @color-main;
+    opacity: 0.15;
 }
 
 .list {
-    background: #e3e3e3;
-    border-radius: 3px;
+    //background: @color-white;
+    background: rgb(37, 37, 39);
     list-style-type: none;
     -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 0 rgba(0, 0, 0, 0.1);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 0 rgba(0, 0, 0, 0.1);
     float: left;
-    margin: 60px 5px 80px;
+    margin: 60px 5px 80px 20px;
     padding: 4px 3px 3px 3px;
     position: relative;
-    width: 250px;
-    min-height: 200px;
+    width: 220px;
+    min-height: 400px;
+    border-left: 1px;
+    border-left-width: 1px;
+    border-left-color: @color-white;
+    box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7)
+}
+
+.list h3{
+    color: @color-white;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'DK Crayon Crumble';
 }
 
 .app-container  {
@@ -61,9 +139,26 @@ body {
 .taskBlock {
     padding: 3px;
     margin: 3px;
-    background: #ff6a00;
-    border-radius: 3px;
+    background: #fce97f;
+    //border-radius: 3px;
     cursor: pointer;
+}
+
+.taskBlock:hover{
+    opacity: 0.75;
+}
+
+.taskBlock .title{
+    font-weight: bold;
+}
+
+.taskBlock .name{
+    font-size: larger;
+}
+
+.taskBlock .status{
+    font-style:italic;
+    text-align: right;
 }
 
 
