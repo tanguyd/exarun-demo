@@ -1,0 +1,17 @@
+﻿<div ng-controller="projectsController">
+    <div class="projectBoard">
+        
+        <div class="projectTile" ng-repeat="project in projects">
+            
+            <div class="tile-title">{{project.name}}</div>
+            
+            <hr />
+
+            <div class="tile-footer">
+                <a ng-href="#/tasks/{{project.id}}"><i class="fa fa-arrow-right"></i> Tasks</a>
+            </div>
+
+        </div>
+
+    </div>
+</div>
