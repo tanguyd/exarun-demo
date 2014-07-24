@@ -1,19 +1,29 @@
-﻿<div ng-controller="tasksController">
-    <div class="tasksBoard">
+﻿<div ng-controller="tasksController" >
+    <div class="tasksBoard" >
         <div class="list-wrapper">
+            <div class="boardHeader">
+                {{project.name}}
+            </div>
+            <div class="row">
+                <div class="col-md-2" ng-repeat="status in statuses">
+                    <div class="list">
+                        <div>
+                            <h3>{{status.name}}</h3>
+                            <!--<hr />-->
+                            <br />
+                        </div>
 
-            <div class="list" ng-repeat="status in statuses">
-                    <div>
-                        <h3>{{status.name}}</h3>
-                        <!--<hr />-->
-                        <br />
+                        <ul ui-sortable="sortableOptions" class="apps-container" ng-model="status.tasks">
+                            <li ng-repeat="task in status.tasks">
+                                <post-it task="task" ng-click="setCurrentTask(task.id)"></post-it>
+                            </li>
+                        </ul>
                     </div>
+                </div>
 
-                    <ul ui-sortable="sortableOptions" class="apps-container" ng-model="status.tasks">
-                        <li ng-repeat="task in status.tasks">
-                            <post-it task="task"></post-it>
-                        </li>
-                    </ul>
+                <div class="col-md-2 detailPanel" ng-hide="!selectedTask">
+                    <div ng-include="'app/templates/views/taskDetail.html'"></div>
+                </div>
             </div>
 
         </div>

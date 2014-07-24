@@ -1,0 +1,12 @@
+﻿<div>
+    <form role="form">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Name</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter name" ng-model="selectedTask.name">
+        </div>
+        <div class="form-group">
+            <label for="statusSelect">Status</label>
+            <select class="form-control" ng-model="selectedTask.status" ng-options="status.name as status.name for status in statuses"></select>
+        </div>
+    </form>
+</div>

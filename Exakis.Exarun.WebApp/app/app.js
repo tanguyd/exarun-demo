@@ -4,6 +4,7 @@
     var app = angular.module('app', [
         // Angular built-in module
         'ngRoute',
+        'ngAnimate',
 
         // Other angular module
         'ui.sortable'

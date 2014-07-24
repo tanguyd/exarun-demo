@@ -22,4 +22,28 @@
     transform: scale(1.2);
   }
 }
+@-moz-keyframes my_animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes my_animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes my_animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 /*# sourceMappingURL=site.animations.css.map */

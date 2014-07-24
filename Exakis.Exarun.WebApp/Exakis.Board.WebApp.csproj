@@ -65,6 +65,7 @@
     <Content Include="app\controllers\projectsController.js" />
     <Content Include="app\services\projectService.js" />
     <Content Include="app\services\taskService.js" />
+    <Content Include="app\templates\views\taskDetail.html" />
     <Content Include="app\templates\views\tasks.html" />
     <Content Include="app\controllers\tasksController.js" />
     <Content Include="Content\font-awesome.css" />
@@ -216,6 +217,9 @@
     <Content Include="Content\site.animations.css.map">
       <DependentUpon>site.animations.css</DependentUpon>
     </Content>
+    <Content Include="Content\DK Crayon Crumble.ttf" />
+    <Content Include="Content\BrookeS8.ttf" />
+    <Content Include="Content\Contribute_FREE-version.ttf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
